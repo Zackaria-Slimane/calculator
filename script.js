@@ -16,9 +16,8 @@ document.addEventListener("click", (e) => {
 		calculator.addNumber(e.target.textContent);
 	}
 	if (e.target.matches("[data-operation]")) {
-		operation.dataset.value = true;
 		console.log(e.target.textContent);
-		console.log(operation);
+		calculator.runCalculation(e.target.textContent);
 	}
 	//run the calculations
 	if (e.target.matches("[data-equals]")) {
@@ -27,6 +26,7 @@ document.addEventListener("click", (e) => {
 	//deletes the last entry
 	if (e.target.matches("[data-delete]")) {
 		console.log(e.target.textContent);
+		calculator.removeNumber();
 	}
 	//clear everything
 	if (e.target.matches("[data-all-clear]")) {
