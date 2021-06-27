@@ -6,7 +6,7 @@
 //* the period button
 //* clicking equals
 
-import { Calculator, firstNumber, secondNumber, operation, result, Calculator } from "./Calculator.js";
+import { Calculator, firstNumber, secondNumber, operation } from "./Calculator.js";
 
 const calculator = new Calculator();
 
