@@ -2,7 +2,7 @@ export const firstEntry = document.querySelector("[data-primary-operand]");
 export const secondEntry = document.querySelector("[data-secondary-operand]");
 export const operationSign = document.querySelector("[data-operation]");
 
-const digitSeperator = new Intl.NumberFormat("en-US", { maximumFractionDigits: 20 });
+const digitSeperator = new Intl.NumberFormat("en-US");
 
 export class Calculator {
 	constructor(firstEntry, secondEntry, operationSign) {
