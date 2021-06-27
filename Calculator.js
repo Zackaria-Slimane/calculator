@@ -9,7 +9,6 @@ export class Calculator {
 		this.firstEntry = firstEntry;
 		this.secondEntry = secondEntry;
 		this.operationSign = operationSign;
-		this.clear();
 	}
 	// getters and setters for the entries text contents
 	get firstEntryContent() {
