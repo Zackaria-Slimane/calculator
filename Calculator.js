@@ -1,7 +1,7 @@
 export const firstEntry = document.querySelector("[data-primary-operand]");
 export const secondEntry = document.querySelector("[data-secondary-operand]");
 export const operationSign = document.querySelector("[data-operation]");
-
+//number formatting
 const digitSeperator = new Intl.NumberFormat("en-US");
 
 export class Calculator {
@@ -9,6 +9,7 @@ export class Calculator {
 		this.firstEntry = firstEntry;
 		this.secondEntry = secondEntry;
 		this.operationSign = operationSign;
+		this.clear();
 	}
 	// getters and setters for the entries text contents
 	get firstEntryContent() {
@@ -36,6 +37,7 @@ export class Calculator {
 
 	removeNumber() {
 		this.firstEntryContent = this.firstEntryContent.toString().slice(0, -1);
+		console.log(this.firstEntryContent);
 	}
 
 	clear() {
@@ -56,6 +58,8 @@ export class Calculator {
 				return n1 - n2;
 			case "÷":
 				return n1 / n2;
+			case "=":
+				return calculate();
 		}
 	}
 
