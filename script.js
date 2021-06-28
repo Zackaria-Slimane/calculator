@@ -12,12 +12,11 @@ const calculator = new Calculator(firstEntry, secondEntry, operationSign);
 
 document.addEventListener("click", (e) => {
 	if (e.target.matches("[data-number]")) {
-		console.log(e.target.textContent);
 		calculator.addNumber(e.target.textContent);
 	}
 	if (e.target.matches("[data-operation]")) {
 		console.log(e.target.textContent);
-		operationSign.textContent = e.target.textContent;
+		// operationSign.textContent = e.target.textContent;
 		calculator.runCalculation(e.target.textContent);
 	}
 	//run the calculations
